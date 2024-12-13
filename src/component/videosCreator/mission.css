@@ -1,0 +1,87 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f7; /* Gris pâle */
+    margin: 0;
+    padding: 0;
+}
+
+.mission-container {
+ 
+    padding: 20px;
+    text-align: center;
+    background-color: #e6f7e6; /* Vert très clair */
+    min-height: 100vh;
+}
+
+.title {
+    color: #2c5f2d; /* Vert foncé */
+    margin-bottom: 20px;
+}
+
+.missions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.mission-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    transition: transform 0.3s;
+}
+
+.mission-card:hover {
+    transform: scale(1.05);
+}
+
+.mission-name {
+    color: #2c5f2d; /* Vert foncé */
+    margin-bottom: 10px;
+}
+
+.mission-description {
+    color: #555; /* Gris foncé */
+    margin-bottom: 15px;
+}
+
+.mission-detail {
+    color: #333; /* Texte gris foncé */
+    font-weight: bold;
+}
+
+.difficulty {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.difficulty-facile {
+    background-color: #d4edda; /* Vert pâle */
+    color: #155724; /* Vert foncé */
+}
+
+.difficulty-intermédiaire {
+    background-color: #ffeeba; /* Jaune pâle */
+    color: #856404; /* Jaune foncé */
+}
+
+.difficulty-difficile {
+    background-color: #f8d7da; /* Rouge pâle */
+    color: #721c24; /* Rouge foncé */
+}
+
+.difficulty-expert {
+    background-color: #cce5ff; /* Bleu pâle */
+    color: #004085; /* Bleu foncé */
+}
+
+.difficulty-maître {
+    background-color: #e2e3e5; /* Gris clair */
+    color: #383d41; /* Gris foncé */
+}

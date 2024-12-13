@@ -1,0 +1,9 @@
+#cardImp{
+    background-color: black;
+   margin-top: 10px;
+   margin-left: 2px;
+   margin-right: 10px;
+   display: flex;
+   justify-content: center;
+    border-radius: 20px
+}

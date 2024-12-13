@@ -1,0 +1,73 @@
+.payment-page {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    min-height: 100vh;
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+  }
+  
+  .payment-container {
+    background-color: rgb(226, 221, 221);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 350px;
+    max-width: 90%;
+    text-align: center;
+  }
+  
+  h2 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .phone-entry, .phone-registered, .balance-info, .payment-action {
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    width: 100%;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  button:hover:not(:disabled) {
+    background-color: #45a049;
+  }
+  
+  .payment-status {
+    margin-top: 20px;
+    background-color: #e7f7e7;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #4CAF50;
+    color: #4CAF50;
+  }
+
+  #Seuil>p{
+    color: #45a049;
+  }
+  #cardstatus>p{
+    color:#45a049;
+  }
+  #cardstatusfail>p{
+    color:#bd0505;
+  }

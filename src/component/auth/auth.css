@@ -1,0 +1,69 @@
+#Header{
+    display: flex;
+    justify-content: center;
+   background-color: rgb(184, 183, 183);
+}
+#Header>div{
+    padding: 2%;
+}
+a{
+    text-decoration: none;
+    color: black;
+    /* font-weight: 800; */
+    font-size: 20px;
+}
+
+#isicon{
+    margin-top: 10%;
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: center;
+}
+#isicon>i{
+    font-size:80px;
+}
+#pathTrame>p{
+    display: flex;
+    justify-content: center;
+    font-size:40px;
+}
+
+#form{
+    padding-right: 10%;
+    padding-left: 10%;
+   
+    height:auto;
+}
+
+#divi1{
+    width:99%;
+    
+}
+#divi2{
+    padding-right:20px;
+
+    width:100%;
+    height:30px;
+    margin-bottom:10px ;
+    border: solid 0.15px lightgray;
+    
+
+
+}
+
+#divi2>input{
+    width:100%;
+    height: 90%;
+}
+input {
+    padding-left: 10px;
+    border: none; /* Supprime toutes les bordures */
+    outline: none; /* Supprime la bordure de focus (facultatif) */
+  }
+
+#divSub{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10%;
+    
+}

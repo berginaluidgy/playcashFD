@@ -1,0 +1,70 @@
+/* #all{
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    padding: 2%;
+    margin-top: 2%;
+    align-items: center;
+}
+#all>p{
+    margin-right: 3%;
+}
+#selldiv{
+    
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#get{
+    display: flex;
+    background-color: green;
+    width: max-content;
+    padding: 2%;
+}
+#get>p{
+    margin-right: 3%;
+} */
+
+#cardFoll {
+    background: linear-gradient(135deg, #ff4081, #ffab40);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    max-width: 400px;
+    margin: auto;
+}
+
+#bgnT {
+    background-color: #d32f2f;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#selldiv, #get, #all {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    transition: background 0.3s;
+}
+
+#selldiv:hover, #get:hover, #all:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+#selldiv p, #get p, #all p {
+    margin: 0;
+    font-size: 16px;
+}
+
+#selldiv i, #get i, #all i {
+    margin-left: 10px;
+    color: #fff;
+}

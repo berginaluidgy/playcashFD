@@ -1,0 +1,169 @@
+.video-maker-page {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+  }
+  
+  .video-maker-container {
+    background-color: rgb(226, 221, 221);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 350px;
+    max-width: 90%;
+    text-align: center;
+  }
+  
+  h2 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .video-stats {
+    margin-bottom: 30px;
+  }
+  
+  .video-stats p {
+    margin: 5px 0;
+  }
+  
+  .progress-section {
+    margin-top: 20px;
+  }
+  
+  .progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .progress {
+    height: 100%;
+    background-color: #4CAF50;
+  }
+  
+  .upload-section {
+    margin-top: 20px;
+  }
+  
+  .upload-input {
+    padding: 10px;
+    width: 100%;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .upload-input:focus {
+    outline: none;
+    border-color: #4CAF50;
+  }
+  
+  .uploaded-video {
+    margin-top: 20px;
+  }
+  
+  video {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mission-actions {
+    margin-top: 30px;
+  }
+  
+  .action-btn {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .action-btn:hover {
+    background-color: #45a049;
+  }
+  
+
+  #param{
+    margin-bottom:10px;
+
+  }
+  #firstVM{
+    display: flex;
+  }
+
+  #firstVM>div{
+    margin-left: 10px;
+    margin-right: 10px;
+    border:solid 0.1px red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 20px;
+    border-radius: 50%;
+  }
+  #secondVM{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+   background-color: #4CAF50 ;
+   border-radius:10px ;
+ 
+  
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+  }
+  #secondVM>div>p{
+      color: white;
+      font-size: large;
+  }
+
+
+  #viewVideoMakerparam{
+    display: flex;
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: space-between;
+    padding-left: 2%;
+    padding-right: 2%;
+    align-items: center;
+
+  }
+  #close{
+    display: flex;
+  }
+  #close2{
+ color: #45a049;
+ margin-left: 10px;
+  }
+  #stats{
+    display: flex;
+    background-color: #45a049;
+    align-items: center;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+  }
+  #stats>i{
+    margin-right: 10px;
+    
+  }

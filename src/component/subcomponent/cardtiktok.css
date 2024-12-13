@@ -1,0 +1,17 @@
+#earn,#info,#bgn{
+margin-bottom: 10%;
+}
+#earn{
+    display: flex;
+    justify-content: center;
+}
+#bgn{
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    padding: 2%;
+    
+}
+#bgn>div>p{
+    font-size: 20px;
+}

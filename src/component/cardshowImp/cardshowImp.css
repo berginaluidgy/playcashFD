@@ -1,0 +1,113 @@
+/* #cardcontainer{
+    margin-top: 3%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 0.1%;
+    padding-bottom: 0.1%;
+}
+#progressparent{
+    height: 5px;
+    width: 100%;
+    border:solid 0.4px red;
+    border-radius: 25px;
+}
+#progresschild{
+    height: 5px;
+    width: 30%;
+    background-color: red ;
+    border-radius: 25px;
+} */
+#cardcontainer {
+    margin-top: 3%;
+    background-color: #ffffff; /* Couleur de fond */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre plus douce */
+    padding: 20px; /* Plus d'espace à l'intérieur */
+    transition: transform 0.2s; /* Animation au survol */
+}
+
+#cardcontainer:hover {
+    transform: translateY(-2px); /* Légère élévation au survol */
+}
+
+#task, #reward {
+    font-family: 'Arial', sans-serif; /* Police de caractères */
+    margin-bottom: 15px; /* Espace entre les éléments */
+}
+#progress{
+    margin-bottom: 2%;
+}
+#progressparent {
+    height: 8px; /* Hauteur augmentée pour un meilleur rendu */
+    width: 100%;
+    background-color: #e0e0e0; /* Couleur de fond de la barre de progression */
+    border-radius: 25px; /* Coins arrondis */
+    overflow: hidden; /* Pour éviter que l'enfant dépasse */
+}
+
+#progresschild {
+    height: 100%; /* Prend toute la hauteur du parent */
+    width: 30%; /* Ajuste la progression ici */
+    background-color: #ff5722; /* Couleur de la barre de progression */
+    border-radius: 25px; /* Coins arrondis */
+}
+
+p {
+    margin: 0; /* Évite les marges par défaut */
+    font-size: 16px; /* Taille de police */
+    color: #333; /* Couleur du texte */
+}
+#animate{
+    width: 90%;
+}
+
+#reachCard{
+    width: 100%;
+    background-color: #333;
+}
+
+#request{
+    display: flex;
+    margin-left: 10px;
+    margin-right: 10px;
+    justify-content: space-between;
+    margin-bottom: 10px;
+   
+}
+#txt{
+    background-color: whitesmoke;
+    
+}
+#txt>p{
+    color:  #45a049;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top:5%;
+    padding-bottom: 5%;
+    font-size: 15px;
+}
+
+#clickBUTTON{
+ 
+    background-color:#45a049;
+    display: flex;
+    justify-content: center;
+    height: min-content;
+    width: 20%;
+    color:black;
+    border-radius: 10px;
+
+}
+#clickBUTTON>p{
+    color: whitesmoke;
+}
+
+#popup{
+    position: fixed;
+    height: 100%;
+    background-color:whitesmoke;
+    width: 97%;
+    top:1px;
+    
+}

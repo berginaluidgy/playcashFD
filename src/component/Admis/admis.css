@@ -1,0 +1,61 @@
+/* Container global pour le tableau de bord */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f7f7f7;  /* Gris très pâle */
+    min-height: 100vh;
+}
+
+.dashboard-container h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Style des cartes */
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 15px 0;
+    width: 100%;
+    max-width: 500px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Effet au survol de la carte */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Style des éléments à l'intérieur de la carte */
+.card p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Titre de chaque carte */
+.card p:first-child {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #2d3748;
+}
+
+/* Ajout d'une bordure et d'un fond plus léger pour les statistiques importantes */
+.card p:nth-child(odd) {
+    background-color: #f1f1f1;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+/* Style du tableau avec bordures légères */
+.dashboard-container h1,
+.card p {
+    font-family: 'Roboto', sans-serif;
+}
