@@ -8,7 +8,7 @@ import Homepage from './component/homepage/homepage.jsx'
 import Views from './component/navigation/page/views.jsx'
 import Subs from './component/navigation/page/subs.jsx'
 import Quetes from './component/navigation/page/quetes.jsx'
-import Tiktok from './component/navigation/page/tiktok.jsx'
+// import Tiktok from './component/navigation/page/tiktok.jsx'
 import Account from './component/Account/account.jsx'
 import Compte from './component/Account/subaccount/compte.jsx'
 import CC from './component/Account/subaccount/CC.jsx'
@@ -38,10 +38,10 @@ const routes=createBrowserRouter([
         path:'/Task',
         element:<Quetes/>
       },
-      {
-        path:'/Video',
-        element:<Tiktok/>
-      },
+      // {
+      //   path:'/Video',
+      //   element:<Tiktok/>
+      // },
 
     ]
     
