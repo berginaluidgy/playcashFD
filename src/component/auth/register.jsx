@@ -19,6 +19,7 @@ function Register() {
             });
             alert('Inscription réussie !');
             navigate("/views"); 
+            localStorage.setItem('token', response.data.access);
         } catch (error) {
             console.error('Erreur lors de l\'inscription :', error);
         }
