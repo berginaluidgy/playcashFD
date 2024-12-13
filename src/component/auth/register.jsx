@@ -18,7 +18,7 @@ function Register() {
                 password,
             });
             alert('Inscription réussie !');
-            navigate("/auth/Login");  
+            navigate("/auth/auth/login");  
             localStorage.setItem('token', response.data.access);
         } catch (error) {
             console.error('Erreur lors de l\'inscription :', error);
