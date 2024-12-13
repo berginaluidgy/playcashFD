@@ -61,7 +61,8 @@ export default function Compte() {
       </div>
       <div id="c">
       <p>Votre revenu</p>
-      <p>{datanew.firstdegree.Money} HTG</p>
+      <p>{datanew.firstdegree ? datanew.firstdegree.Money : '-'} HTG</p>
+
       </div>
       <div id="d"></div></div>
     <div id="acc">
