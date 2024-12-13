@@ -17,7 +17,7 @@ export default function Main() {
             <Link to={'./Task'}>  Quetes</Link>
         </div> */}
         <div id="">
-            <Link to={'./Video'}>Video </Link>
+            <Link to={'./videoMaker'}>Video </Link>
         </div>
     </div>
     

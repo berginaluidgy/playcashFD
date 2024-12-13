@@ -27,6 +27,10 @@ const routes=createBrowserRouter([
     element:<Homepage/>,
     children:[
       {
+        index: true, // Définir une route index
+        element: <Views/>, // Composant rendu par défaut
+      },
+      {
         path:'/views',
         element:<Views/>
       },
