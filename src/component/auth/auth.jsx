@@ -12,13 +12,16 @@ export default function Auth() {
     const location = useLocation();
 console.log(location.pathname)
     const[path,setpath]=useState(null)
+     const[classN,setclassN]=useState(null)
 useEffect(()=>{
- if(location.pathname === "/auth/auth/login"){
-   
+if(location.pathname === "/auth/auth/login"){
+   setclassN(<div className={"loginC"} >
+    <p>"Veuillez Vous Connecter avec L email et le password que vous avez mentionner"</p>
+</div>)
    setpath("Se Connecter")
 }
 if(location.pathname === "/auth/auth/Register"){
-   
+    setclassN("")
     setpath("S'inscrire")
  }else(
    console.log('')
@@ -28,6 +31,7 @@ if(location.pathname === "/auth/auth/Register"){
 
   return (
     <div>
+          {classN}
     <div id="Header">
         <div >
             <p>
