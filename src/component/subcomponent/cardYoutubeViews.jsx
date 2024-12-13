@@ -8,12 +8,41 @@ import DOMAINBACKEND from "../GLOBALVAR/DOMAINBACKEND";
 // import acsHOMEINFO from './Account/access/acsHOMEINFO.jsx'
 
 export default function CardYoutubeViews({ data }) {
+  console.log(data)
   const [rewardMessage, setRewardMessage] = useState("");
   const [showConfetti, setShowConfetti] = useState(false);
   const [isTabActive, setIsTabActive] = useState(true);
   const [isaclick, setIsaclick] = useState(false);
   const [placeshare, setplaceShare] = useState('');
-const info =acsHOMEINFO()
+  const [infos,setinfo] = useState(null);
+  useEffect(()=>{
+    if(Authconfirmator()){
+      const decodeToken = (token) => {
+      const payload = token.split(".")[1];
+      return JSON.parse(atob(payload));
+  };
+  
+  const Token = localStorage.getItem("token");
+  const decodedToken = decodeToken(Token);
+  console.log(decodedToken);
+  const Capture=decodedToken.user_id;
+  console.log(Capture)
+
+  axios.get(DOMAINBACKEND+'/ACCESS/'+Capture)
+  .then(res=>{
+      console.log(res.data.data)
+     setinfo(res.data.data)
+  })
+  .catch(
+     error=>console.error(error)
+     
+  )
+
+}
+
+  },[infos])
+
+
   // Gestion du changement de visibilité (changement d'onglet)
   useEffect(() => {
     const handleVisibilityChange = () => {
@@ -138,15 +167,16 @@ const info =acsHOMEINFO()
     }
   };
 
-
+  // console.log(info)
   function handleSHARE(){
     console.log(data)
 
   }
 
 function sharefunction(){
+  // console.log(info)
   if(placeshare==''){
-    setplaceShare(<SAHRE link={info.third.ShareLink}/>)
+    setplaceShare(<SAHRE link={infos==null?'Veuillez Vous connecter pour voir votre lien':infos.third.ShareLink+"/"+data.id}/>)
   }
   else{
     setplaceShare('')
@@ -256,7 +286,7 @@ function SAHRE({ link }) {
           <p>Partager ce lien avec vos amis</p>
         </div>
         <div id="Message">
-          <p>{link.slice(10, 40)}</p>
+          <p>{link}</p>
           <div id="colle" onClick={copyToClipboard}>
             <i className="fa-solid fa-copy"></i>
           </div>

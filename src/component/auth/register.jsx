@@ -16,10 +16,12 @@ function Register() {
                 username,
                 email,
                 password,
-            });
+            }); 
+            console.log(response.data)
+            localStorage.setItem('token', response.data.access);
             alert('Inscription réussie !');
             navigate("/auth/auth/login");  
-            localStorage.setItem('token', response.data.access);
+            
         } catch (error) {
             console.error('Erreur lors de l\'inscription :', error);
         }
