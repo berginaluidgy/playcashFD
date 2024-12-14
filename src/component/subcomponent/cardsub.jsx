@@ -25,7 +25,7 @@ axios.get(DOMAINBACKEND+'/linky')
   return (
 
     <div>
-        {Data===null?(<div>Aucune Chaine ajouter</div>):(<div>
+        {Data===null?(<div>Patientez Un peu.....</div>):(<div>
 {Data.map((E)=>(
 <ComponentSub  key={E.linked} nbrs={E.nbrS} nbrsF={E.nbrFocus} linked={E.linked}  subCash={E.subscash} share={E.shareCash}/>
 ))}

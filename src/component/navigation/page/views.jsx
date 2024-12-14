@@ -22,7 +22,7 @@ export default function Views() {
   return (
     <div>
       {data == null ? (
-        <div>no way</div>
+        <div>Patientez Un peu.....</div>
       ) : (
         <div>
           {data.map((child) => (
