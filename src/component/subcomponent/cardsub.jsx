@@ -98,7 +98,6 @@ const handleExternalLink = async (url) => {
     try {
       const token = localStorage.getItem("token");
       if (!token) {
-        alert("Token non trouvé. Veuillez vous connecter.");
         return;
       }
 
