@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 // import acsHOMEINFO from '../Account/access/acsHOMEINFO';
 import Authconfirmator from '../Auth.confirmator';
 import DOMAINBACKEND from '../GLOBALVAR/DOMAINBACKEND';
+import Header from '../header/header';
 
 const API_URL = DOMAINBACKEND+'/videos/';
 
@@ -124,7 +125,7 @@ export default function VideoManager() {
 
     return (
         <div id='HeadVideoMaker'>
-           
+            <Header/>
             <div id="param">{view}</div>
             <div style={styles.container}>
             <h1 style={styles.heading}>Gestionnaire de Vidéos</h1>
