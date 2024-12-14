@@ -75,7 +75,7 @@ useEffect(()=>{
 }
 var idlien=getYouTubeChannelId(linked)
 setlinkSH(DOMAINBACKEND+'/YOUTUBE/MySharing--LinkCHANNEL/reward/'+userId+'/'+idlien)
-},[])
+},[localStorage.getItem("token")])
 
 function sharefunction(){
   
