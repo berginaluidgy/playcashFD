@@ -6,8 +6,8 @@ export default function CardshowImp() {
   const[data,setdata]=useState(useState(null))
   const token = localStorage.getItem("token");
   if (!token) {
-    alert("Token non trouvé. Veuillez vous connecter.");
-    return;
+   console.log( 'Token non trouve')
+   return;
   }
 
   const decodeToken = (token) => {
