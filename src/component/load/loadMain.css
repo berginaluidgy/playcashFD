@@ -1,0 +1,37 @@
+/* Styles principaux pour centrer le loader */
+.loader-container {
+    padding-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height:auto; /* Pleine hauteur */
+    /* background-color: #f9f9f9; Arrière-plan clair */
+  }
+  
+  /* Loader infini */
+  .loader {
+    width: 20px;
+    height: 20px;
+    border: 6px solid #ffd700; /* Bordure OR */
+    border-top-color: #228b22; /* Bordure verte */
+    border-radius: 50%;
+    animation: spin 1s linear infinite; /* Animation */
+  }
+  
+  /* Animation de rotation */
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Texte en dessous du loader */
+  .loader-text {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #228b22; /* Vert */
+    text-align: center;
+  }
+  

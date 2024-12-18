@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import acsHOMEINFO from '../Account/access/acsHOMEINFO'
 import Authconfirmator from "../Auth.confirmator";
 import DOMAINBACKEND from '../GLOBALVAR/DOMAINBACKEND';
+import Loader from '../load/loadMain';
 
 export default function Cardsub() {
 
@@ -25,7 +26,7 @@ axios.get(DOMAINBACKEND+'/linky')
   return (
 
     <div>
-        {Data===null?(<div>Patientez Un peu.....</div>):(<div>
+        {Data===null?(<Loader/>):(<div>
 {Data.map((E)=>(
 <ComponentSub  key={E.linked} nbrs={E.nbrS} nbrsF={E.nbrFocus} linked={E.linked}  subCash={E.subscash} share={E.shareCash}/>
 ))}
@@ -50,8 +51,7 @@ const shareCash=props.share
 useEffect(()=>{
   const token = localStorage.getItem("token");
                 if (!token) {
-                  alert("Token non trouvé. Veuillez vous connecter.");
-                  return;
+                   return;
                 }
           
                 const decodeToken = (token) => {
@@ -91,7 +91,7 @@ function sharefunction(){
 const handleExternalLink = async (url) => {
     if (!Authconfirmator()) {
       alert("Connectez-vous pour participer.");
-      navigate("authauth/auth/login"); 
+      navigate("/auth/auth/login"); 
       return;
     }
 

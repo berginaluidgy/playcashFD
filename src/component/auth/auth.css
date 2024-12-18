@@ -77,3 +77,130 @@ input {
 }
 
 
+
+
+
+/* Conteneur pour l'animation */
+.loading-animation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  /* Style des points */
+  .loading-animation span {
+    width: 8px;
+    height: 8px;
+    background-color: #ffffff; /* Blanc */
+    border-radius: 50%;
+    animation: bounce 1s infinite;
+  }
+  
+  /* Animation de rebond */
+  @keyframes bounce {
+    0%, 80%, 100% {
+      transform: scale(0);
+      opacity: 0.5;
+    }
+    40% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Délais pour chaque point */
+  .loading-animation span:nth-child(1) {
+    animation-delay: 0s;
+  }
+  .loading-animation span:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .loading-animation span:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  
+  /* Style du bouton en chargement */
+  #inputSubmit {
+    position: relative;
+    background-color: #228b22; /* Vert */
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #inputSubmit:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+  }
+
+
+
+
+  /* Conteneur pour l'animation */
+.loading-animation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  /* Style des points */
+  .loading-animation span {
+    width: 8px;
+    height: 8px;
+    background-color: #ffffff; /* Blanc */
+    border-radius: 50%;
+    animation: bounce 1s infinite;
+  }
+  
+  /* Animation de rebond */
+  @keyframes bounce {
+    0%, 80%, 100% {
+      transform: scale(0);
+      opacity: 0.5;
+    }
+    40% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Délais pour chaque point */
+  .loading-animation span:nth-child(1) {
+    animation-delay: 0s;
+  }
+  .loading-animation span:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .loading-animation span:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  
+  /* Style du bouton en chargement */
+  button {
+    position: relative;
+    background-color: #228b22; /* Vert */
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  button:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+  }
+  
+  

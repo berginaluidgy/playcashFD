@@ -6,12 +6,14 @@ import Main from '../navigation/Home/main'
 import acsHOMEINFO from '../Account/access/acsHOMEINFO'
 import ExternalLinkReward from './../bigtry';
 import SHOWTELEGRAM from '../SHOWTELEGRAM/SHOWTELEGRAM'
+import Loader from '../load/loadMain'
 
 export default function Homepage() {
  
   return (
   
     <div  id='homefirst'> 
+    
     {/* <ExternalLinkReward/> */}
       <Header/>
       <div id="cardImp">

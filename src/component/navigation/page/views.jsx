@@ -5,6 +5,7 @@ import './views.css';
 import CardYoutubeViews from '../../subcomponent/cardYoutubeViews';
 import axios from 'axios';
 import DOMAINBACKEND from '../../GLOBALVAR/DOMAINBACKEND';
+import Loader from '../../load/loadMain';
 
 export default function Views() {
   const [data, setdata] = useState(null);
@@ -22,7 +23,7 @@ export default function Views() {
   return (
     <div>
       {data == null ? (
-        <div>Patientez Un peu.....</div>
+        <Loader/>
       ) : (
         <div>
           {data.map((child) => (
