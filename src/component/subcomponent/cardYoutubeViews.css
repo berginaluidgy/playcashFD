@@ -3,6 +3,7 @@
     height: 10px;
     margin-left: 2%;
     margin-right: 2%;
+    
 }
 #progressBig{
     width:100%;
@@ -35,14 +36,15 @@ background-color: rgba(29, 28, 28, 0.082);
 #subspart>div>div>p{
     display: flex;
     justify-content: center;
-    
+    color: whitesmoke;
 }
 #cardYte{
+  color:whitesmoke;
     margin-bottom:20px;
     padding: 2%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombre légère */
     border-radius: 15px;
-    
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
 }
 .ipy>p{
 font-weight: bolder;
@@ -112,7 +114,7 @@ border-radius: 10px;
   #subspart>div>div{
     height: 40%;
     width: 100%;
-   
+   color: whitesmoke;
     width: 100%;
     display: flex;
     align-items: center;

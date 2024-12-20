@@ -111,3 +111,18 @@ p {
     top:1px;
     
 }
+
+#position{
+    margin-top: 10px;
+    background-color: #45a049;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 25px;
+    
+}
+#position>p{
+    color: whitesmoke;
+}

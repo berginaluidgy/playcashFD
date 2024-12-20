@@ -5,6 +5,7 @@ import axios from "axios";
 import acsHOMEINFO from '../Account/access/acsHOMEINFO'
 import Authconfirmator from "../Auth.confirmator";
 import DOMAINBACKEND from "../GLOBALVAR/DOMAINBACKEND";
+import addpoint from "../rank/addpoint";
 // import acsHOMEINFO from './Account/access/acsHOMEINFO.jsx'
 
 export default function CardYoutubeViews({ data }) {
@@ -95,7 +96,7 @@ export default function CardYoutubeViews({ data }) {
 
                 });
                 
-
+addpoint()
 
 
 
@@ -272,6 +273,7 @@ function SAHRE({ link }) {
     navigator.clipboard.writeText(link).then(
       () => {
         alert("Lien copié dans le presse-papier !");
+        addpoint()
       },
       (err) => {
         console.error("Erreur lors de la copie du lien : ", err);

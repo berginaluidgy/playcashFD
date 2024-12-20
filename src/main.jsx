@@ -19,6 +19,7 @@ import Register from './component/auth/register.jsx'
 import Login from './component/auth/login.jsx'
 import Auth from './component/auth/auth.jsx'
 import MissionSelector from './component/videosCreator/missions.jsx'
+import RankedUserPage from './component/rank/rank.jsx'
 
 
 const routes=createBrowserRouter([
@@ -101,6 +102,10 @@ path:'auth/Register',
   {
     path:'chooseMission',
     element:<MissionSelector/>
+  },
+  {
+    path:'tiraj',
+    element:<RankedUserPage/>
   }
 ])
 createRoot(document.getElementById('root')).render(

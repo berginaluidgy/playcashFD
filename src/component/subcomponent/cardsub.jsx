@@ -6,6 +6,7 @@ import acsHOMEINFO from '../Account/access/acsHOMEINFO'
 import Authconfirmator from "../Auth.confirmator";
 import DOMAINBACKEND from '../GLOBALVAR/DOMAINBACKEND';
 import Loader from '../load/loadMain';
+import addpoint from '../rank/addpoint';
 
 export default function Cardsub() {
 
@@ -108,6 +109,7 @@ const handleExternalLink = async (url) => {
 
       const decodedToken = decodeToken(token);
       const userId = decodedToken.user_id;
+      addpoint()
       const response = await axios.post(DOMAINBACKEND+"/defineLINK/", {
         link_url: url,
         userid: userId,
@@ -174,6 +176,7 @@ function SAHRE({ link }) {
     navigator.clipboard.writeText(link).then(
       () => {
         alert("Lien copié dans le presse-papier !");
+        addpoint()
       },
       (err) => {
         console.error("Erreur lors de la copie du lien : ", err);

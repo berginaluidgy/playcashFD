@@ -27,7 +27,7 @@ export default function Header() {
 
 if (token) {
   console.log("Token exists:", token);
-  navigate("User/Account/pay"); 
+  navigate("/User/Account/pay"); 
 } else {
   navigate("auth"); 
   console.log("No token found.");
@@ -39,7 +39,7 @@ if (token) {
 
 if (token) {
   console.log("Token exists:", token);
-  navigate("User/Account/X2"); 
+  navigate("/User/Account/X2"); 
 } else {
   navigate("auth"); 
   console.log("No token found.");
