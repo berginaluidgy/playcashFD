@@ -2,6 +2,7 @@ import './rank.css'
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Header from '../header/header';
+import DOMAINBACKEND from '../GLOBALVAR/DOMAINBACKEND';
  
 
 const RankedUserPage = () => {
@@ -13,7 +14,7 @@ const RankedUserPage = () => {
 
     const fetchUserPoints = async () => {
         try {
-            const response = await axios.get("http://127.0.0.1:8000/api/user-points/");
+            const response = await axios.get(DOMAINBACKEND+"/api/user-points/");
             setUserPoints(response.data);
         } catch (error) {
             console.error("Erreur lors de la récupération des points :", error);

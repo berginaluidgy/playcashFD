@@ -32,17 +32,21 @@ axios.get(DOMAINBACKEND+'/ask-didicel/'+userId)
        
         <p>{data.video_count}</p>
       
-        {data.can_request ?(<div id="request">
+        {/* {data.can_request ?(<div id="request">
           
             <div id='txt'><p>Recoit des recharges DIGICEL tous les jours</p></div>
 <div id='clickBUTTON'><p>Demander</p></div> 
-{/* <PopUp/> */}
+
 </div>):(<div id='txt'> <p>Regarder 60 videos Pour recevoir des minutes DIGICEL /NATCOM . NBRS LUES :{data.video_count} VIDEOS</p>  </div>) }
+   
+    */}
+    <Quetes/> 
     </div>
   )
 }
 
 import { color, motion } from "framer-motion";
+import Quetes from '../navigation/page/quetes';
 
 const TelecomLogos = () => {
  
