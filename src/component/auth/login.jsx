@@ -10,7 +10,7 @@ function Login() {
   const [token, setToken] = useState('');
   const [loading, setLoading] = useState(false); // État pour gérer l'animation du bouton
   const navigate = useNavigate();
-
+const [errr,seterrr]=useState('')
   const handleLogin = async (e) => {
     e.preventDefault();
     setLoading(true); // Activer l'animation de chargement
@@ -25,6 +25,7 @@ function Login() {
       navigate('/views');
     } catch (error) {
       console.error('Erreur lors de la connexion :', error);
+     seterrr(error.response.data.detail)
     } finally {
       setLoading(false); // Désactiver l'animation de chargement
     }
@@ -62,7 +63,13 @@ function Login() {
             'Se connecter'
           )}
         </button>
+       
       </div>
+ <div id="errr">
+        <p>{errr}</p>
+      </div>
+
+      
     </form>
   );
 }

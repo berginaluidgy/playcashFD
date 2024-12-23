@@ -104,7 +104,7 @@ addpoint()
           
               } catch (error) {
                 console.error("Erreur lors de la gestion du lien externe :", error);
-                alert("Une erreur s'est produite.");
+                // alert("Une erreur s'est produite.");
               }
             
           }else{
@@ -214,7 +214,12 @@ function sharefunction(){
 
       <div id="bodyC">
         <div id="subspart">
-          <div
+          {data.isview?(<div id="cacheDIV1">
+
+            <div id="cacheDIV2"> <i className="fa-regular fa-eye-slash"></i></div>
+            <div id="cacheDIV3"> Deja vu</div>
+            
+          </div>):( <div
             id="z1"
             onClick={() => handleExternalLink(data.videoID)}
           >
@@ -224,7 +229,8 @@ function sharefunction(){
             <div id="z1b" className="ipy">
               <p>{data.pricepartial}$</p>
             </div>
-          </div>
+          </div>)}
+         
           <div id="x" onClick={sharefunction}>
             <div id="xa" >
               <p>Partager</p>

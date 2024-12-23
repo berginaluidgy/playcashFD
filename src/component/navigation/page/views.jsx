@@ -10,9 +10,34 @@ import Loader from '../../load/loadMain';
 export default function Views() {
   const [data, setdata] = useState(null);
 
+  // Récupérer le token du localStorage
+  const token = localStorage.getItem("token");
+
+  // Fonction pour décoder le token de manière sécurisée
+  const decodeToken = (token) => {
+    try {
+      if (!token) {
+        throw new Error("Token introuvable");
+      }
+      const payload = token.split(".")[1];
+      if (!payload) {
+        throw new Error("Token malformé");
+      }
+      return JSON.parse(atob(payload));
+    } catch (error) {
+      console.error("Erreur lors du décodage du token :", error.message);
+      return null;
+    }
+  };
+
+  const decodedToken = decodeToken(token);
+  const userId = decodedToken && decodedToken.user_id ? decodedToken.user_id : 11; // Valeur par défaut si user_id est introuvable
+
+  console.log("User ID :", userId,DOMAINBACKEND+'/Views/'+userId);
   useEffect(() => { 
+
     axios
-      .get(DOMAINBACKEND+'/Views')
+      .get(DOMAINBACKEND+'/Views/'+userId)
       .then(res => {
         console.log(res.data);
         setdata(res.data);

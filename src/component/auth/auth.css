@@ -203,4 +203,6 @@ input {
     cursor: not-allowed;
   }
   
-  
+  #errr>p{
+    color: red;
+  }
