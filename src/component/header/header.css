@@ -27,3 +27,12 @@
     font-size: 13px;
     color: #4CAF50;
 }
+
+#imgIMGAELOGO{
+    width: 60px;
+    height: 60px;
+
+}
+#imgIMGAELOGO>img{
+    width:100%;
+}
