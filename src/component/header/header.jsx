@@ -62,7 +62,7 @@ if (token) {
   const token = localStorage.getItem("token");
   return (
     <div id='header'>
-<div id="logo"><div id='imgIMGAELOGO' onClick={handleClickHOME} > <img  src={"../../src/assets/logo2.jpg"}/></div></div>
+<div id="logo"><div id='imgIMGAELOGO' onClick={handleClickHOME} > <img  src={"./src/assets/logo2.jpg"}/></div></div>
 <div id="account"><div onClick={handleClick}><i className="fa-solid fa-user"></i></div></div>
 <div id="accountAUTH" onClick={handleClick2} ><div >{islogg}</div>
 {token?(<div id="retr">
