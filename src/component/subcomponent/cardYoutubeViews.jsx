@@ -96,7 +96,7 @@ export default function CardYoutubeViews({ data }) {
 
                 });
                 
-addpoint()
+                addpoint(userId)
 
 
 

@@ -71,7 +71,7 @@ const linked=props.linked
 const subCash=props.subCash
 const shareCash=props.share
 const bool=props.bool
-
+let useridPRO;
 useEffect(()=>{
   const token = localStorage.getItem("token");
                 if (!token) {
@@ -85,6 +85,7 @@ useEffect(()=>{
           
                 const decodedToken = decodeToken(token);
                 const userId = decodedToken.user_id;
+                useridPRO=userId
                 console.log(userId)
 
 
@@ -104,7 +105,7 @@ setlinkSH(DOMAINBACKEND+'/YOUTUBE/MySharing--LinkCHANNEL/reward/'+userId+'/'+idl
 function sharefunction(){
   
   if(placeshare==''){
-    setplaceShare(<SAHRE link={linkSH}/>)
+    setplaceShare(<SAHRE userid={useridPRO}link={linkSH}/>)
   }
   else{
     setplaceShare('')
@@ -132,6 +133,7 @@ const handleExternalLink = async (url) => {
 
       const decodedToken = decodeToken(token);
       const userId = decodedToken.user_id;
+      console.log(userId)
       addpoint(userId)
       const response = await axios.post(DOMAINBACKEND+"/defineLINK/", {
         link_url: url,
@@ -198,12 +200,12 @@ const handleExternalLink = async (url) => {
 
 
 
-function SAHRE({ link }) {
+function SAHRE({ link ,userid}) {
   const copyToClipboard = () => {
     navigator.clipboard.writeText(link).then(
       () => {
         alert("Lien copié dans le presse-papier !");
-        addpoint()
+        addpoint(userid)
       },
       (err) => {
         console.error("Erreur lors de la copie du lien : ", err);
