@@ -14,8 +14,30 @@ export default function Cardsub() {
   
     const [Data,setdata]=useState(null)
 useEffect(()=>{
+  const token = localStorage.getItem("token");
 
-axios.get(DOMAINBACKEND+'/linky')
+let userId;
+
+if (!token) {
+  userId = 11; // Définit userId à 11 si le token est introuvable
+} else {
+  const decodeToken = (token) => {
+    const payload = token.split(".")[1];
+    return JSON.parse(atob(payload));
+  };
+
+  try {
+    const decodedToken = decodeToken(token);
+    userId = decodedToken.user_id; // Définit userId en fonction du token décodé
+  } catch (error) {
+    console.error("Erreur lors du décodage du token:", error);
+    userId = 11; // Définit userId à 11 en cas d'erreur dans le décodage
+  }
+}
+
+console.log(userId);
+
+axios.get(DOMAINBACKEND+'/linky'+userId)
 .then(res=>{
     console.log(res.data)
     setdata(res.data)
@@ -29,7 +51,7 @@ axios.get(DOMAINBACKEND+'/linky')
     <div>
         {Data===null?(<Loader/>):(<div>
 {Data.map((E)=>(
-<ComponentSub  key={E.linked} nbrs={E.nbrS} nbrsF={E.nbrFocus} linked={E.linked}  subCash={E.subscash} share={E.shareCash}/>
+<ComponentSub  key={E.linked} bool={E.issubs} nbrs={E.nbrS} nbrsF={E.nbrFocus} linked={E.linked}  subCash={E.subscash} share={E.shareCash}/>
 ))}
 
         </div>)}
@@ -48,6 +70,7 @@ const nbrF=props.nbrsF
 const linked=props.linked
 const subCash=props.subCash
 const shareCash=props.share
+const bool=props.bool
 
 useEffect(()=>{
   const token = localStorage.getItem("token");
@@ -109,7 +132,7 @@ const handleExternalLink = async (url) => {
 
       const decodedToken = decodeToken(token);
       const userId = decodedToken.user_id;
-      addpoint()
+      addpoint(userId)
       const response = await axios.post(DOMAINBACKEND+"/defineLINK/", {
         link_url: url,
         userid: userId,
@@ -143,12 +166,16 @@ const handleExternalLink = async (url) => {
     <div id="bodyC">
 
         <div id="subspart">
+          {bool?(<div id="cacheDIV1">
 
+<div id="cacheDIV2"> <i className="fa-regular fa-eye-slash"></i></div>
+<div id="cacheDIV3"> Deja abonnés</div>
 
+</div>):(
             <div id="axb" onClick={()=>{handleExternalLink(linked)}}>
             <div id="ba"><p>s'abonner</p></div>
             <div id="unb" ><p  className='ipy'>{subCash} $</p></div>
-        </div>
+        </div>)}
 
         <div id="bxa" onClick={sharefunction}>
         <div id="xa"><p>partager</p></div>

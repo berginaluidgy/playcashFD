@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './mission.css'
 import Header from '../header/header';
 import axios from 'axios';
@@ -46,10 +46,12 @@ const data = [
 ];
 
 const MissionSelector = () => {
+    const [isselect,setselect]=useState(false)
     const navigate = useNavigate();
     
  
     function push(mission_name,difficulty,total_videos,cash_reward){
+        
         if(Authconfirmator()){
 
             const decodeToken = (token) => {
@@ -78,7 +80,9 @@ const MissionSelector = () => {
 })
            }
 
-        
+        else{
+            alert('Veuillez vous Connecter avant !')
+        }
     }
     
     return (
